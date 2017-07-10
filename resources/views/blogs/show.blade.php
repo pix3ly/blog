@@ -2,7 +2,9 @@
 <ul>
     @foreach ($blog->posts as $post)
         <li>
-            <h2>{{ $post->title }}</h2>
+            <h2>
+                <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+            </h2>
         </li>
     @endforeach
 </ul>
