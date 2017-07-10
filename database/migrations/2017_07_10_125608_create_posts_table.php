@@ -10,7 +10,6 @@ class CreatePostsTable extends Migration {
             $table->increments('id');
             $table->integer('blog_id')->unsigned();
             $table->date('date');
-            $table->time('time');
             $table->string('title');
             $table->text('body');
         });

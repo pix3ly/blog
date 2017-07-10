@@ -1,10 +1,14 @@
-<h1>{{ $blog->title }}</h1>
-<ul>
-    @foreach ($blog->posts as $post)
-        <li>
-            <h2>{{ $post->title }}</h2>
-            {{ str_limit($post->body, 80) }}
-            <a href="/posts/{{ $post->id }}">Continue</a>
-        </li>
-    @endforeach
-</ul>
+@extends('layouts.general')
+
+@section('body')
+    <h1>{{ $blog->title }}</h1>
+    <ul class="blog__posts">
+        @foreach ($blog->posts as $post)
+            <li class="posts__post">
+                <h2 class="post__title">{{ $post->title }}</h2>
+                <div class="post__body">{!! str_limit($post->body, 240) !!}</div>
+                <a class="post__continue" href="/posts/{{ $post->id }}">Continue</a>
+            </li>
+        @endforeach
+    </ul>
+@endsection
