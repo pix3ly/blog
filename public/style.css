@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Nunito;
+    font-family: -apple-system;
 }
 
 h1 {
@@ -18,6 +18,35 @@ h2 {
 
 body, p {
     font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #BF55EC;
+}
+
+a:hover {
+    color: #000;
+}
+
+.row {
+    display: flex;
+}
+
+.row__column {
+    margin-right: 24px;
+}
+
+.row__column:last-child {
+    margin-right: 0;
+}
+
+.row__column--align-center {
+    text-align: center;
+}
+
+.row__column--align-middle {
+    align-self: center;
 }
 
 .wrapper {
@@ -41,12 +70,22 @@ body, p {
     display: block;
 }
 
+.post__rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating__net {
+    display: inline;
+    margin: 0 8px;
+}
+
 .post__title {
-    margin-bottom: 24px;
     color: #222;
 }
 
 .post__body {
+    margin-top: 24px;
     line-height: 200%;
     color: #555;
 }
