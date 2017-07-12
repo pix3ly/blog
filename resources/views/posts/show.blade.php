@@ -5,9 +5,17 @@
     <div class="row">
         <div class="row__column row__column--align-center row__column--align-middle">
             <div class="post__rating">
-                <a href="#">+</a>
+                <form method="POST" action="/posts/{{ $post->id }}/votes">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="direction" value="1" />
+                    <input type="submit" value="+" />
+                </form>
                 <h2 class="rating__net">{{ $post->netVotes() }}</h2>
-                <a href="#">-</a>
+                <form method="POST" action="/posts/{{ $post->id }}/votes">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="direction" value="-1" />
+                    <input type="submit" value="-" />
+                </form>
             </div>
         </div>
         <div class="row__column">

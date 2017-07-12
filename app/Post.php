@@ -14,6 +14,6 @@ class Post extends Model {
     }
 
     public function netVotes() {
-        return ($this->votes()->where('direction', 1)->count() - $this->votes()->where('direction', 0)->count());
+        return ($this->votes()->where('direction', 1)->count() - $this->votes()->where('direction', -1)->count());
     }
 }
