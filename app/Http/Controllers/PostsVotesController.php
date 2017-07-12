@@ -17,9 +17,13 @@ class PostsVotesController extends Controller {
         ])->first();
 
         if ($existing) {
-            $existing->direction = $direction;
+            if ($existing->direction == $direction) {
+                $existing->delete();
+            } else {
+                $existing->direction = $direction;
 
-            $existing->save();
+                $existing->save();
+            }
         } else {
             Vote::insert([
                 'user_id' => $user_id,
