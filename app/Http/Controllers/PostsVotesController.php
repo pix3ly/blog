@@ -9,13 +9,18 @@ use App\Vote;
 class PostsVotesController extends Controller {
     public function store(Request $request, $post_id) {
         $user_id = 1;
+        $direction = $request->input('direction');
 
-        if (!Vote::where([
+        $existing = Vote::where([
             ['user_id', '=', $user_id],
             ['post_id', '=', $post_id]
-        ])->get()->count()) {
-            $direction = $request->input('direction');
+        ])->first();
 
+        if ($existing) {
+            $existing->direction = $direction;
+
+            $existing->save();
+        } else {
             Vote::insert([
                 'user_id' => $user_id,
                 'post_id' => $post_id,
