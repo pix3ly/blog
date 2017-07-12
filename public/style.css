@@ -29,6 +29,18 @@ a:hover {
     color: #000;
 }
 
+input[type=submit] {
+    background: none;
+    border: none;
+    color: #BF55EC;
+    font: inherit;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: #000;
+}
+
 .row {
     display: flex;
 }
