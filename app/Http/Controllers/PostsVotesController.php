@@ -4,16 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Vote;
+
 class PostsVotesController extends Controller {
-    public function store(Request $request, $postId) {
-        $direction = $request->input('direction');
+    public function store(Request $request, $post_id) {
+        $user_id = 1;
 
-        \App\Vote::insert([
-            'user_id' => 1,
-            'post_id' => $postId,
-            'direction' => $direction
-        ]);
+        if (!Vote::where([
+            ['user_id', '=', $user_id],
+            ['post_id', '=', $post_id]
+        ])->get()->count()) {
+            $direction = $request->input('direction');
 
-        return redirect('/posts/' . $postId);
+            Vote::insert([
+                'user_id' => $user_id,
+                'post_id' => $post_id,
+                'direction' => $direction
+            ]);
+        }
+
+        return redirect('/posts/' . $post_id);
     }
 }
