@@ -29,11 +29,36 @@ a:hover {
     color: #000;
 }
 
+label, input {
+    display: block;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #777;
+}
+
+input {
+    font: inherit;
+}
+
+input[type=email], input[type=password] {
+    margin-bottom: 24px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
+
+input[type=email]:focus, input[type=password]:focus {
+    outline: none;
+    border-color: #BF55EC;
+}
+
 input[type=submit] {
     background: none;
     border: none;
     color: #BF55EC;
-    font: inherit;
     cursor: pointer;
 }
 
@@ -112,4 +137,8 @@ input[type=submit]:hover {
     margin-top: 24px;
     text-decoration: none;
     color: #BF55EC;
+}
+
+.form__title {
+    margin-bottom: 48px;
 }
