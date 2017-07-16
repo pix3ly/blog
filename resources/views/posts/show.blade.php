@@ -1,7 +1,7 @@
 @extends('layouts.general')
 
 @section('body')
-    <h1>{{ $post->title }}</h1>
-    {!! $post->body !!}
-    <p>{{ date('F jS, Y', strtotime($post->posted)) }}</p>
+    <h1 class="spacing__bottom-regular">{{ $post->title }}</h1>
+    <div class="post__body">{!! $post->body !!}</div>
+    <p class="spacing__top-regular post__datestamp">{{ date('F jS, Y', strtotime($post->posted_on)) }}</p>
 @endsection
