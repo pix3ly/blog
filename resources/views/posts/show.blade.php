@@ -3,5 +3,5 @@
 @section('body')
     <h1>{{ $post->title }}</h1>
     {!! $post->body !!}
-    <p>{{ date('F jS, Y', strtotime($post->date)) }}</p>
+    <p>{{ date('F jS, Y', strtotime($post->posted)) }}</p>
 @endsection

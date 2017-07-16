@@ -9,7 +9,7 @@ class CreatePostsTable extends Migration {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->date('date');
+            $table->datetime('posted');
             $table->string('title');
             $table->text('body');
         });
