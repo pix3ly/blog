@@ -8,7 +8,7 @@ class CreatePostsTable extends Migration {
     public function up() {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('blog_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->date('date');
             $table->string('title');
             $table->text('body');

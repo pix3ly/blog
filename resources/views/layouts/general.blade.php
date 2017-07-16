@@ -5,8 +5,6 @@
         <link rel="stylesheet" href="/style.css" />
     </head>
     <body>
-        <div class="wrapper">
-            @yield('body')
-        </div>
+        @yield('body')
     </body>
 </html>
