@@ -6,6 +6,13 @@
         <link rel="stylesheet" href="/style.css" />
     </head>
     <body>
+        @if (Auth::check())
+            <ul>
+                <li>
+                    <a href="/logout">Log out</a>
+                </li>
+            </ul>
+        @endif
         <div class="body">
             @yield('body')
         </div>
