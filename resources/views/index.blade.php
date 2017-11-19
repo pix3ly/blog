@@ -1,13 +1,14 @@
 @extends('layout')
 
 @section('body')
-    <ul class="posts">
+    <ul>
         @foreach ($posts as $post)
             <li>
-                <h1 class="spacing__bottom-regular">{{ $post->title }}</h1>
+                <h1>
+                    <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                </h1>
                 <p>By {{ $post->user->name }}</p>
-                <div class="post__body">{!! $post->body !!}</div>
-                <a class="spacing__top-regular post__continue" href="/posts/{{ $post->id }}">Continue</a>
+                <p>{{ date('F jS, Y', strtotime($post->posted_on)) }}</p>
             </li>
         @endforeach
     </ul>
