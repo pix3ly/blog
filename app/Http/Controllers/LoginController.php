@@ -16,7 +16,7 @@ class LoginController extends Controller {
             'email' => $request->input('email'),
             'password' => $request->input('password')
         ])) {
-            return redirect()->route('index_get');
+            return redirect()->route('index');
         }
 
         return redirect()->route('login');
