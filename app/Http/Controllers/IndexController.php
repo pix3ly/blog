@@ -10,7 +10,7 @@ class IndexController extends Controller {
     public function index() {
         $posts = Post::all();
 
-        return view('index.index', [
+        return view('index', [
             'posts' => $posts
         ]);
     }

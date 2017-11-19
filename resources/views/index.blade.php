@@ -1,4 +1,4 @@
-@extends('layouts.general')
+@extends('layout')
 
 @section('body')
     <ul class="posts">

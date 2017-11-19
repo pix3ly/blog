@@ -1,4 +1,4 @@
-@extends('layouts.general')
+@extends('layout')
 
 @section('body')
     <h1 class="spacing__bottom-regular">{{ $post->title }}</h1>
