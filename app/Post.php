@@ -8,6 +8,8 @@ use App\User;
 use App\Tag;
 
 class Post extends Model {
+    public $timestamps = false;
+
     public function user() {
         return $this->belongsTo(User::class);
     }
