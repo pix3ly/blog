@@ -15,7 +15,7 @@ class PostsController extends Controller {
         $post = new Post;
 
         $post->user_id = \Auth::user()->id;
-        $post->posted_on = date('Y-m-d');
+        $post->posted_on = date('Y-m-d H:i:s');
         $post->title = $request->input('title');
         $post->body = $request->input('body');
 
