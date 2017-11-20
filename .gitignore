@@ -11,3 +11,4 @@ npm-debug.log
 .env
 /public/mix-manifest.json
 /public/css
+/public/js
