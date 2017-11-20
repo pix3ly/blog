@@ -6,7 +6,7 @@
         <label>Title</label>
         <input type="text" name="title" />
         <label>Body</label>
-        <textarea name="body"></textarea>
+        <TextEditor></TextEditor>
         <button>Create</button>
     </form>
 @endsection
