@@ -1,7 +1,13 @@
 <template>
     <div>
-        <button v-on:click="bold">Bold</button>
-        <button v-on:click="italic">Italic</button>
+        <div class="row spacing-bottom-small">
+            <div class="column tight gutter-right">
+                <button v-on:click="bold">Bold</button>
+            </div>
+            <div class="column tight">
+                <button v-on:click="italic">Italic</button>
+            </div>
+        </div>
         <textarea
             ref="editor"
             name="body"

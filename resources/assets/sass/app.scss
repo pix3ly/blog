@@ -78,15 +78,15 @@ $border-color: #EEE;
 
     .column {
         flex: 1;
-    }
-}
 
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #25CE87;
-    color: #FFF;
-    border-radius: 4px;
+        &.tight {
+            flex: none;
+        }
+
+        &.gutter-right {
+            margin-right: 16px;
+        }
+    }
 }
 
 .seperator {
@@ -118,4 +118,52 @@ ul.posts {
 
 .body {
     line-height: 200%;
+}
+
+button, .button {
+    padding: 12px 24px;
+    background: #25CE87;
+    color: #FFF;
+    border-radius: 4px;
+}
+
+.button {
+    display: inline-block;
+}
+
+button {
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+label {
+    display: block;
+    margin-bottom: 16px;
+}
+
+input, textarea {
+    margin-bottom: 32px;
+
+    display: block;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+
+    &:focus {
+        outline: 0;
+        border-color: #25CE87;
+    }
+}
+
+textarea {
+    resize: vertical;
+    height: 240px;
 }
