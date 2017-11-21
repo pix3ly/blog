@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    font-family: Libre Baskerville;
+    font-family: Muli;
     color: #555;
 }
 
@@ -36,6 +36,14 @@ body {
 
 // Others
 $border-color: #EEE;
+
+.navigation {
+    border-bottom: 1px solid $border-color;
+
+    .wrapper {
+        margin: 32px auto;
+    }
+}
 
 .seperator {
     margin: 48px 0;
