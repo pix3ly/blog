@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,700i" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i" />
         <link rel="stylesheet" href="/css/app.css" />
     </head>
     <body>
@@ -12,7 +14,9 @@
                     </li>
                 </ul>
             @endif
-            @yield('body')
+            <div class="wrapper">
+                @yield('body')
+            </div>
         </div>
         <script src="/js/app.js"></script>
     </body>
