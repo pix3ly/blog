@@ -10,11 +10,16 @@
             @if (Auth::check())
                 <div class="navigation">
                     <div class="wrapper">
-                        <ul>
-                            <li>
-                                <a href="/logout">Log out</a>
-                            </li>
-                        </ul>
+                        <div class="row">
+                            <ul class="column">
+                                <li>
+                                    <a href="/logout">Log out</a>
+                                </li>
+                            </ul>
+                            <div class="column text-align-right">
+                                <a href="/posts/create" class="button">Create</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             @endif

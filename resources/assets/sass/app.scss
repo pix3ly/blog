@@ -45,6 +45,26 @@ $border-color: #EEE;
     }
 }
 
+.row {
+    display: flex;
+
+    .column {
+        flex: 1;
+    }
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #25CE87;
+    color: #FFF;
+    border-radius: 4px;
+}
+
 .seperator {
     margin: 48px 0;
     width: 100%;
