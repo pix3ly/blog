@@ -21,7 +21,22 @@ h1, h2, h3, h4, h5, h6, a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat;
+}
+
+h1, h2 {
     line-height: 160%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
 }
 
 body {
@@ -32,6 +47,19 @@ body {
 // Spacing
 .spacing-bottom-small {
     margin-bottom: 16px;
+}
+
+.spacing-bottom-medium {
+    margin-bottom: 32px;
+}
+
+// Text Modifiers
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-right {
+    text-align: right;
 }
 
 // Others
@@ -51,10 +79,6 @@ $border-color: #EEE;
     .column {
         flex: 1;
     }
-}
-
-.text-align-right {
-    text-align: right;
 }
 
 .button {
@@ -78,7 +102,7 @@ $border-color: #EEE;
     max-width: 960px;
 }
 
-ul {
+ul.posts {
     list-style: none;
     margin: -48px 0;
 

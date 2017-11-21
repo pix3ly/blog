@@ -1,13 +1,13 @@
 @extends('layout')
 
 @section('body')
-    <ul>
+    <ul class="posts">
         @foreach ($posts as $post)
             <li>
                 <p class="spacing-bottom-small">{{ $post->timeDifference }}</p>
-                <h1>
+                <h2>
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
-                </h1>
+                </h2>
             </li>
         @endforeach
     </ul>

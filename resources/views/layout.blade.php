@@ -23,6 +23,13 @@
                     </div>
                 </div>
             @endif
+            <div class="navigation">
+                <div class="wrapper">
+                    <h3>
+                        <a href="/">Blog</a>
+                    </h3>
+                </div>
+            </div>
             <div class="wrapper">
                 @yield('body')
             </div>
