@@ -1,3 +1,5 @@
+![](https://i.imgur.com/3f42MYO.png)
+
 # Blog
 
 Lorem ipsum, dolor sit amet
