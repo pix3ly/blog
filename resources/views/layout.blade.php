@@ -33,6 +33,7 @@
             <div class="wrapper">
                 @yield('body')
             </div>
+            <div class="wrapper" style="text-align: center;">Powered by <a href="https://github.com/range-of-motion/blog" target="_blank">Blog</a> &middot; <a href="/admin">Admin</a></div>
         </div>
         <script src="/js/app.js"></script>
     </body>
