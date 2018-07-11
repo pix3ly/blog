@@ -10,3 +10,10 @@ Route::get('/login', 'LoginController@index')->name('login');
 Route::post('/login', 'LoginController@store');
 
 Route::get('/logout', 'LogoutController@index')->name('logout');
+
+// Admin
+Route::get('/admin', function () {
+    return redirect()->route('admin.dashboard');
+})->name('admin');
+
+Route::get('/admin/dashboard', 'Admin\DashboardController')->name('admin.dashboard');

@@ -189,3 +189,20 @@ textarea {
         border-radius: 5px;
     }
 }
+
+/* Row */
+.row {
+    display: flex;
+
+    &.row--divide {
+        justify-content: space-between;
+    }
+
+    > .row__column {
+        flex: 1;
+
+        &.row__column--compact {
+            flex: none;
+        }
+    }
+}
