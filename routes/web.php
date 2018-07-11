@@ -17,3 +17,6 @@ Route::get('/admin', function () {
 })->name('admin');
 
 Route::get('/admin/dashboard', 'Admin\DashboardController')->name('admin.dashboard');
+
+Route::get('/admin/posts/create', 'Admin\PostController@create')->name('admin.posts.create');
+Route::post('/admin/posts', 'Admin\PostController@store');

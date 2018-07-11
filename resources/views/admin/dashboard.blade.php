@@ -7,6 +7,7 @@
     </head>
     <body>
         <div class="wrapper">
+            <a href="/admin/posts/create">Create</a>
             <ul>
                 @foreach ($posts as $post)
                     <li class="row row--divide">
