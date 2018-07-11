@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Post;
+use Parsedown;
 
 class PostsController extends Controller {
     public function create() {
@@ -25,8 +26,11 @@ class PostsController extends Controller {
     }
 
     public function show($id) {
+        $parsedown = new Parsedown();
+
         return view('posts.show', [
-            'post' => Post::find($id)
+            'post' => Post::find($id),
+            'parsedown' => $parsedown
         ]);
     }
 }
