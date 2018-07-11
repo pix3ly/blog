@@ -8,6 +8,11 @@
                 <h2>
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                 </h2>
+                <ul class="tags pt-20">
+                    @foreach ($post->tags as $tag)
+                        <li>{{ $tag->name }}</li>
+                    @endforeach
+                </ul>
             </li>
         @endforeach
     </ul>

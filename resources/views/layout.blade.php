@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,700i" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i,700" />
         <link rel="stylesheet" href="/css/app.css" />
     </head>
     <body>
