@@ -27,3 +27,5 @@ Route::get('/admin/posts/create', 'Admin\PostController@create')->name('admin.po
 Route::post('/admin/posts', 'Admin\PostController@store');
 
 Route::get('/admin/tags', 'Admin\TagController@index')->name('admin.tags.index');
+Route::get('/admin/tags/{id}/edit', 'Admin\TagController@edit')->name('admin.tags.edit');
+Route::put('/admin/tags/{id}', 'Admin\TagController@update');
