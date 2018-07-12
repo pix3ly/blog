@@ -20,3 +20,5 @@ Route::get('/admin/dashboard', 'Admin\DashboardController')->name('admin.dashboa
 
 Route::get('/admin/posts/create', 'Admin\PostController@create')->name('admin.posts.create');
 Route::post('/admin/posts', 'Admin\PostController@store');
+
+Route::get('/admin/tags', 'Admin\TagController@index')->name('admin.tags.index');

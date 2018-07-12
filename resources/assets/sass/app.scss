@@ -206,3 +206,19 @@ textarea {
         }
     }
 }
+
+/* List */
+.list {
+    list-style: none;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+
+    > li {
+        padding: 15px 20px;
+        border-bottom: 1px solid $border-color;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
