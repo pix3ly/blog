@@ -8,6 +8,9 @@
         <li>
             <a href="/admin/tags">Tags</a>
         </li>
+        <li>
+            <a href="/admin/settings">Settings</a>
+        </li>
     </ul>
     <div class="wrapper">
         @yield('content')
