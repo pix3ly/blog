@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.frontend')
 
-@section('body')
+@section('content')
     <form method="POST" action="/posts">
         {{ csrf_field() }}
         <label>Title</label>

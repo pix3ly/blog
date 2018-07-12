@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.frontend')
 
-@section('body')
+@section('content')
     <ul class="posts">
         @foreach ($posts as $post)
             <li>

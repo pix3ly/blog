@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.frontend')
 
-@section('body')
+@section('content')
     <form method="POST">
         {{ csrf_field() }}
         <label>E-mail</label>
