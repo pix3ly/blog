@@ -3,13 +3,13 @@
 @section('body')
     <ul class="wrapper">
         <li>
-            <a href="/admin/dashboard">Dashboard</a>
+            <a href="/admin/dashboard"><i class="fal fa-home"></i> Dashboard</a>
         </li>
         <li>
-            <a href="/admin/tags">Tags</a>
+            <a href="/admin/tags"><i class="fal fa-tag"></i> Tags</a>
         </li>
         <li>
-            <a href="/admin/settings">Settings</a>
+            <a href="/admin/settings"><i class="fal fa-cog"></i> Settings</a>
         </li>
     </ul>
     <div class="wrapper">
