@@ -18,9 +18,12 @@
             <button>Submit</button>
         </form>
     </div>
+@endsection
+
+@section('scripts')
     <script>
-        var simplemde = new SimpleMDE({
-            element: document.getElementById('testThing')
-        });
+        var editor = new Editor();
+
+        editor.render();
     </script>
 @endsection
