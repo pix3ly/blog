@@ -9,10 +9,10 @@ use Carbon\Carbon;
 
 class IndexController extends Controller {
     public function index() {
-        $posts = Post::orderBy('posted_on', 'DESC')->get();
+        $posts = Post::orderBy('created_at', 'DESC')->get();
 
         foreach ($posts as $post) {
-            $post->timeDifference = Carbon::parse($post->posted_on)->diffForHumans();
+            $post->timeDifference = Carbon::parse($post->created_at)->diffForHumans();
         }
 
         return view('index', [

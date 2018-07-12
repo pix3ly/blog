@@ -20,7 +20,7 @@
                                 @endforeach
                             </ul>
                         </div>
-                        <div class="row__column row__column--compact">{{ $post->posted_on }}</div>
+                        <div class="row__column row__column--compact">{{ $post->created_at }}</div>
                     </li>
                 @endforeach
             </ul>

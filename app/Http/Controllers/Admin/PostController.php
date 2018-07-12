@@ -23,7 +23,7 @@ class PostController extends Controller {
         $post->user_id = 1;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-        $post->posted_on = date('Y-m-d H:i:s');
+        $post->created_at = date('Y-m-d H:i:s');
 
         $post->save();
 
