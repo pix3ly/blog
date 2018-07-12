@@ -6,7 +6,7 @@
             <div class="card__header row row--divide">
                 <div class="row__column row__column--compact">Posts</div>
                 <div class="row__column row__column--compact">
-                    <a href="/admin/posts/create">Create</a>
+                    <a class="btn btn--green" href="/admin/posts/create">Create</a>
                 </div>
             </div>
             <ul class="list list--flush">

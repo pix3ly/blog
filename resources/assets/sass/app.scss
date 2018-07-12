@@ -239,6 +239,27 @@ textarea {
     }
 }
 
+// Button
+.btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #FFF;
+    background: #007bff;
+    border-radius: 5px;
+
+    &.btn--gray {
+        background: #6c757d;
+    }
+
+    &.btn--green {
+        background: #28a745;
+    }
+
+    &.btn-red {
+        background: #dc3545;
+    }
+}
+
 /* Spacing */
 .mt-1 {
     margin-top: 10px;
