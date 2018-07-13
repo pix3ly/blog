@@ -15,22 +15,21 @@ Route::post('/login', 'LoginController@store');
 Route::get('/logout', 'LogoutController@index')->name('logout');
 
 // Admin
-Route::middleware(['admin_role'])->group(function () {
-    Route::get('/admin', function () {
+Route::middleware(['admin_role'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', function () {
         return redirect()->route('admin.dashboard');
     })->name('admin');
 
-    Route::get('/admin/dashboard', 'Admin\DashboardController')->name('admin.dashboard');
+    Route::get('dashboard', 'Admin\DashboardController')->name('dashboard');
 
-    Route::get('/admin/posts/create', 'Admin\PostController@create')->name('admin.posts.create');
-    Route::post('/admin/posts', 'Admin\PostController@store');
+    Route::resource('posts', 'Admin\PostController', ['only' => [
+        'create', 'store'
+    ]]);
 
-    Route::get('/admin/tags', 'Admin\TagController@index')->name('admin.tags.index');
-    Route::get('/admin/tags/create', 'Admin\TagController@create')->name('admin.tags.create');
-    Route::post('/admin/tags', 'Admin\TagController@store');
-    Route::get('/admin/tags/{id}/edit', 'Admin\TagController@edit')->name('admin.tags.edit');
-    Route::put('/admin/tags/{id}', 'Admin\TagController@update');
+    Route::resource('tags', 'Admin\TagController', ['only' => [
+        'index', 'create', 'store', 'edit', 'update'
+    ]]);
 
-    Route::get('/admin/settings', 'Admin\SettingController@get')->name('admin.settings');
-    Route::post('/admin/settings', 'Admin\SettingController@post');
+    Route::get('settings', 'Admin\SettingController@get')->name('settings');
+    Route::post('settings', 'Admin\SettingController@post');
 });
