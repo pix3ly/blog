@@ -26,6 +26,8 @@ Route::middleware(['admin_role'])->group(function () {
     Route::post('/admin/posts', 'Admin\PostController@store');
 
     Route::get('/admin/tags', 'Admin\TagController@index')->name('admin.tags.index');
+    Route::get('/admin/tags/create', 'Admin\TagController@create')->name('admin.tags.create');
+    Route::post('/admin/tags', 'Admin\TagController@store');
     Route::get('/admin/tags/{id}/edit', 'Admin\TagController@edit')->name('admin.tags.edit');
     Route::put('/admin/tags/{id}', 'Admin\TagController@update');
 

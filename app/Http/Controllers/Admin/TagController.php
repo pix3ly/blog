@@ -14,6 +14,22 @@ class TagController extends Controller {
         return view('admin.tags.index', compact('tags'));
     }
 
+    public function create() {
+        return view('admin.tags.create');
+    }
+
+    public function store(Request $request) {
+        // TODO VALIDATE
+
+        $tag = new Tag;
+
+        $tag->name = $request->input('name');
+
+        $tag->save();
+
+        return redirect()->route('admin.tags.index');
+    }
+
     public function edit($id) {
         $tag = Tag::find($id);
 
