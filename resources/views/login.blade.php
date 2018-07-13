@@ -1,12 +1,16 @@
-@extends('layouts.frontend')
+@extends('layouts.form')
 
 @section('content')
     <form method="POST">
         {{ csrf_field() }}
-        <label>E-mail</label>
-        <input type="email" name="email" />
-        <label>Password</label>
-        <input type="password" name="password" />
+        <div class="troep">
+            <label>E-mail</label>
+            <input type="email" name="email" />
+        </div>
+        <div class="troep">
+            <label>Password</label>
+            <input type="password" name="password" />
+        </div>
         <button>Log in</button>
     </form>
 @endsection
