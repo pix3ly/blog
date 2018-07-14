@@ -6,7 +6,7 @@ Route::post('/authenticate', 'AuthenticateController@post');
 Route::middleware(['password'])->group(function () {
     Route::get('/', 'IndexController@index')->name('index');
 
-    Route::get('/posts/{id}', 'PostsController@show')->name('posts.show');
+    Route::get('/posts/{id}', 'PostController@show')->name('posts.show');
 });
 
 Route::get('/login', 'LoginController@index')->name('login');
@@ -22,13 +22,13 @@ Route::middleware(['admin_role'])->prefix('admin')->name('admin.')->group(functi
 
     Route::get('dashboard', 'Admin\DashboardController')->name('dashboard');
 
-    Route::resource('posts', 'Admin\PostController', ['only' => [
+    Route::resource('posts', 'Admin\PostController')->only([
         'create', 'store'
-    ]]);
+    ]);
 
-    Route::resource('tags', 'Admin\TagController', ['only' => [
+    Route::resource('tags', 'Admin\TagController')->only([
         'index', 'create', 'store', 'edit', 'update'
-    ]]);
+    ]);
 
     Route::get('settings', 'Admin\SettingController@get')->name('settings');
     Route::post('settings', 'Admin\SettingController@post');
