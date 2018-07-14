@@ -6,7 +6,7 @@ Route::post('/authenticate', 'AuthenticateController@post');
 Route::middleware(['password'])->group(function () {
     Route::get('/', 'IndexController@index')->name('index');
 
-    Route::get('/posts/{id}', 'PostController@show')->name('posts.show');
+    Route::get('/posts/{slug}', 'PostController@show')->name('posts.show');
 });
 
 Route::get('/login', 'LoginController@index')->name('login');

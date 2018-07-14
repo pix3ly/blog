@@ -22,6 +22,7 @@ class PostController extends Controller {
 
         $post->user_id = 1;
         $post->title = $request->input('title');
+        $post->slug = str_slug($post->title, '-');
         $post->body = $request->input('body');
         $post->created_at = date('Y-m-d H:i:s');
 
@@ -29,6 +30,6 @@ class PostController extends Controller {
 
         $post->tags()->sync($request->input('tags'));
 
-        return redirect()->route('posts.show', ['id' => $post->id]);
+        return redirect()->route('posts.show', ['slug' => $post->slug]);
     }
 }

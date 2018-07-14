@@ -8,11 +8,17 @@ use App\Post;
 use Parsedown;
 
 class PostController extends Controller {
-    public function show($id) {
+    public function show($slug) {
+        $post = Post::where('slug', $slug)->first();
+
+        if (!$post) {
+            return 'NOTHING';
+        }
+
         $parsedown = new Parsedown();
 
         return view('posts.show', [
-            'post' => Post::find($id),
+            'post' => $post,
             'parsedown' => $parsedown
         ]);
     }
