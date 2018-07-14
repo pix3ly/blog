@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use App\Post;
 use App\Tag;
+use Auth;
 
 class PostController extends Controller {
     public function create() {
@@ -20,7 +21,7 @@ class PostController extends Controller {
 
         $post = new Post;
 
-        $post->user_id = 1;
+        $post->user_id = Auth::user()->id;
         $post->title = $request->input('title');
         $post->slug = str_slug($post->title, '-');
         $post->body = $request->input('body');
