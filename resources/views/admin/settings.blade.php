@@ -11,4 +11,15 @@
         </div>
         <button>Submit</button>
     </form>
+    <div class="card mt-1">
+        <div class="card__header">Administrators</div>
+        <ul class="list list--flush">
+            @foreach ($administrators as $administrator)
+                <li class="row row--divide">
+                    <div class="row__column row__column--compact">{{ $administrator->email }}</div>
+                    <div class="row__column row__column--compact">{{ ucfirst($administrator->role) }}</div>
+                </li>
+            @endforeach
+        </ul>
+    </div>
 @endsection

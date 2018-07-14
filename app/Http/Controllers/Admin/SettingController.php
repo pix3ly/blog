@@ -6,12 +6,15 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Setting;
+use App\User;
 
 class SettingController extends Controller {
     public function get() {
         $password = Setting::get('password')->value;
 
-        return view('admin.settings', compact('password'));
+        $administrators = User::where('role', '!=', 'regular')->get();
+
+        return view('admin.settings', compact('password', 'administrators'));
     }
 
     public function post(Request $request) {
