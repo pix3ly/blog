@@ -1,5 +1,7 @@
 @extends('layouts.frontend')
 
+@section('title', 'Home')
+
 @section('content')
     <ul class="posts">
         @foreach ($posts as $post)

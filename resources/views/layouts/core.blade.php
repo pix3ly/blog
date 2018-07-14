@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        @if (View::hasSection('title'))
+            <title>Blog - @yield('title')</title>
+        @else
+            <title>Blog</title>
+        @endif
         <script defer src="/storage/fontawesome/all.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,700i" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i,700" />

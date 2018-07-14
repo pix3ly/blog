@@ -1,5 +1,7 @@
 @extends('layouts.backend')
 
+@section('title', 'Admin - Create Post')
+
 @section('content')
     <div class="wrapper">
         <form method="POST" action="/admin/posts">

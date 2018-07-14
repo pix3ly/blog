@@ -1,5 +1,7 @@
 @extends('layouts.form')
 
+@section('title', 'Login')
+
 @section('content')
     <form method="POST">
         {{ csrf_field() }}

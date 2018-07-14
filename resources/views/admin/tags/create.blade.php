@@ -1,5 +1,7 @@
 @extends('layouts.backend')
 
+@section('title', 'Admin - Create Tag')
+
 @section('content')
     <div class="wrapper">
         <form method="POST" action="/admin/tags">

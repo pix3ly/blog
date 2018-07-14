@@ -1,5 +1,7 @@
 @extends('layouts.backend')
 
+@section('title', 'Admin - Edit Tag')
+
 @section('content')
     <form method="POST" action="/admin/tags/{{ $tag->id }}">
         {{ method_field('PUT') }}

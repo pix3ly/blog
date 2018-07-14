@@ -1,5 +1,7 @@
 @extends('layouts.backend')
 
+@section('title', 'Admin - Tags')
+
 @section('content')
     <div class="wrapper">
         <div class="card">

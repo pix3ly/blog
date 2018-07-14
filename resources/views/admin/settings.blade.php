@@ -1,5 +1,7 @@
 @extends('layouts.backend')
 
+@section('title', 'Admin - Settings')
+
 @section('content')
     <form method="POST">
         {{ csrf_field() }}
