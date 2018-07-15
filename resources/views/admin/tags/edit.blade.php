@@ -10,6 +10,10 @@
             <label>Name</label>
             <input type="text" name="name" value="{{ $tag->name }}" />
         </div>
+        <div class="troep">
+            <label>Slug</label>
+            <input type="text" name="slug" value="{{ $tag->slug }}" />
+        </div>
         <button>Submit</button>
     </form>
 @endsection

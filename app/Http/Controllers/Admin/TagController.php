@@ -26,6 +26,7 @@ class TagController extends Controller {
         $tag = new Tag;
 
         $tag->name = $request->input('name');
+        $tag->slug = str_slug($tag->name, '-');
 
         $tag->save();
 
@@ -44,6 +45,7 @@ class TagController extends Controller {
         // TODO VALIDATE
 
         $tag->name = $request->input('name');
+        $tag->slug = $request->input('slug');
 
         $tag->save();
 
