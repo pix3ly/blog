@@ -10,17 +10,19 @@ use App\User;
 
 class SettingController extends Controller {
     public function get() {
-        $password = Setting::get('password')->value;
+        $security_type = Setting::get('security_type') ? Setting::get('security_type')->value : '';
+        $security_password = Setting::get('security_password') ? Setting::get('security_password')->value : '';
 
         $administrators = User::where('role', '!=', 'regular')->get();
 
-        return view('admin.settings', compact('password', 'administrators'));
+        return view('admin.settings', compact('security_type', 'security_password', 'administrators'));
     }
 
     public function post(Request $request) {
         // TODO VALIDATE
 
-        Setting::set('password', $request->input('password'));
+        Setting::set('security_type', $request->input('security_type'));
+        Setting::set('security_password', $request->input('security_password'));
 
         return redirect()->route('admin.settings');
     }
