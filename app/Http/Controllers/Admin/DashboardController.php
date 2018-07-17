@@ -9,7 +9,7 @@ use App\Post;
 
 class DashboardController extends Controller {
     public function __invoke() {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'DESC')->get();
 
         return view('admin.dashboard', compact('posts'));
     }
