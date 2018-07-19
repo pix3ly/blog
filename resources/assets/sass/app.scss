@@ -49,6 +49,10 @@ body {
     padding-top: 10px;
 }
 
+.mb-2 {
+    margin-bottom: 20px;
+}
+
 .spacing-bottom-small {
     margin-bottom: 16px;
 }
@@ -207,7 +211,7 @@ ul.posts {
         background: #28a745;
     }
 
-    &.btn-red {
+    &.btn--red {
         background: #dc3545;
     }
 }
