@@ -51,4 +51,12 @@ class TagController extends Controller {
 
         return redirect()->route('admin.tags.index');
     }
+
+    public function destroy(Request $request, $id) {
+        $tag = Tag::find($id);
+
+        $tag->delete();
+
+        return redirect()->route('admin.tags.index');
+    }
 }

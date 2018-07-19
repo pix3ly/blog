@@ -27,7 +27,7 @@ Route::middleware(['admin_role'])->prefix('admin')->name('admin.')->group(functi
     ]);
 
     Route::resource('tags', 'Admin\TagController')->only([
-        'index', 'create', 'store', 'edit', 'update'
+        'index', 'create', 'store', 'edit', 'update', 'destroy'
     ]);
 
     Route::get('settings', 'Admin\SettingController@get')->name('settings');
